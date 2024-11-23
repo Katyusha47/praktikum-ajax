@@ -5,7 +5,7 @@ $(document).ready(function () {
         let name = $("#name").val().trim();
 
         $.ajax({
-            url: "sapa.php", 
+            url: "post.php", 
             type: "POST",
             data: { name: name },
             success: function (response) {
