@@ -1,8 +1,8 @@
 $(document).ready(function () {
     $("#formSapa").submit(function (event) {
-        event.preventDefault();
-        
-        let name = $("#name").val();
+        event.preventDefault(); 
+
+        let name = $("#name").val().trim();
 
         $.ajax({
             url: "sapa.php", 
@@ -12,7 +12,7 @@ $(document).ready(function () {
                 $("#response").html(response);
             },
             error: function () {
-                $("#response").html("Terjadi kesalahan. Silakan coba lagi.");
+                $("#response").html("<span class='text-danger'>Terjadi kesalahan. Silakan coba lagi.</span>");
             }
         });
     });
